@@ -1,0 +1,32 @@
+          digitalWrite(motorPin2, LOW);
+          digitalWrite(motorPin3, LOW);
+          digitalWrite(motorPin4, HIGH);
+        } else if (direction == 2) {
+          // Move the robot backward
+          digitalWrite(motorPin1, LOW);
+          digitalWrite(motorPin2, HIGH);
+          digitalWrite(motorPin3, HIGH);
+          digitalWrite(motorPin4, LOW);
+        } else if (direction == 3) {
+          // Turn the robot left
+          digitalWrite(motorPin1, LOW);
+          digitalWrite(motorPin2, HIGH);
+          digitalWrite(motorPin3, LOW);
+          digitalWrite(motorPin4, HIGH);
+        } else if (direction == 4) {
+          // Turn the robot right
+          digitalWrite(motorPin1, HIGH);
+          digitalWrite(motorPin2, LOW);
+          digitalWrite(motorPin3, HIGH);
+          digitalWrite(motorPin4, LOW);
+        }
+      }
+    }
+  }
+
+  // Disconnect from the server
+  client.stop();
+
+  // Wait for a moment before sending the next request
+  delay(100);
+}
